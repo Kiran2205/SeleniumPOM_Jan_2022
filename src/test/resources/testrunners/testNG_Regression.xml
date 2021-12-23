@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Open Cart Test Suite" thread-count="3" parallel="tests" verbose="3">
+    <listeners>
+<!--        <listener class-name="com.qa.opencart.listeners.ExtentReportListener"></listener>-->
+        <listener class-name="com.qa.opencart.listeners.TestAllureListener"></listener>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="Login Page Test">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.qa.opencart.test.LoginPageTest">
+                <methods>
+                    <include name="loginTitleTest"/>
+                    <include name="loginPageUrlTest"/>
+                    <include name="chkForgotPwdLinkTest"/>
+                    <include name="doLoginTest"/>
+                    <include name="loginNegativeTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Account Page Test">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="com.qa.opencart.test.AccountsPageTest">
+                <methods>
+                    <include name="accPageTitleTest"/>
+                    <include name="validateAccPageHeadersTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
