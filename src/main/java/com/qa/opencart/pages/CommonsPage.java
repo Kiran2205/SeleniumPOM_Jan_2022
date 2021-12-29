@@ -4,7 +4,7 @@ public class CommonsPage {
     //Search
     //Add to Cart
 
-    public void CommonsPage() {
+    public CommonsPage() {
 
     }
 }
