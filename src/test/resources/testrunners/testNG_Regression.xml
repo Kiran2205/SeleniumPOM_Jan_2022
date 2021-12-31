@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Open Cart Test Suite" thread-count="3" parallel="tests" verbose="3">
     <listeners>
-<!--        <listener class-name="com.qa.opencart.listeners.ExtentReportListener"></listener>-->
+        <listener class-name="com.qa.opencart.listeners.ExtentReportListener"></listener>
         <listener class-name="com.qa.opencart.listeners.TestAllureListener"></listener>
     </listeners>
 
